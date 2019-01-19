@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <header class="col-sm-12 header text-center">
+      <p class="mt-0">Saurabh Blog Application</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary col-sm-12">
+        <a class="navbar-brand">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about">About Us</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/create">Post a Blog</a>
+            </li>
+          </ul>
+        
+        </div>
+      </nav>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

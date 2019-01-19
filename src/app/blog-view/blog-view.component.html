@@ -1,0 +1,39 @@
+<div class="container pt-2">
+  <div class="row" *ngIf="currentBlog"> 
+    <div class="col-sm-4">
+      <div class="listBlogAllTitle">
+        <ul>
+          <li>{{currentBlog.title}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-8" >
+      <div class="blogContent">
+        <div class="card text-center">
+          <div class="card-header bg-info ">
+            <h1 class="text-white">{{currentBlog.title}}</h1>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{currentBlog.author}}</h5>
+            <p class="card-text">currentBlog</p>
+            <hr>
+             <p [innerHtml]="currentBlog.bodyHtml" class="text-success"></p>
+            <hr>
+            <div class="allButton">
+              <a  [routerLink]="['/edit',currentBlog.blogId]" class="btn btn-primary">Edit Blog</a> &nbsp;
+              <a (click)="deleteBlog()" class="btn btn-success">Delete Blog</a> &nbsp;
+              <a (click)="getToPreviousPage()" class="btn btn-dark text-white">Go Back</a> &nbsp; 
+            </div>
+            <!--all button-->
+          </div>
+          <div class="card-footer bg-info text-white">
+            <b>Posted On:</b> {{currentBlog.created | date }}
+          </div>
+        </div>
+      </div>
+      <!--blogContent-->
+    </div>
+  </div>
+  <!--row-->
+</div>
+<!--container-->
